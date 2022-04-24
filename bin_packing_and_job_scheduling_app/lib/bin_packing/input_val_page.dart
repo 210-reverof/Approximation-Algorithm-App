@@ -26,11 +26,22 @@ class _InputValPageState extends State<InputValPage> {
     inputWidget.add(
       ElevatedButton(
           onPressed: () {
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //       builder: (context) => ResultPage(
+            //             inputList: inputVal,
+            //             binSize: widget.binSize,
+            //           )),
+            // );
+
+            // for debugging
             Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => ResultPage(
-                        num: inputVal,
+                  builder: (context) => const ResultPage(
+                        inputList: [7, 5, 6, 4, 2, 3, 7, 5],
+                        binSize: 10,
                       )),
             );
           },
@@ -38,7 +49,7 @@ class _InputValPageState extends State<InputValPage> {
     );
 
     return Scaffold(
-        resizeToAvoidBottomInset: false,
+        // resizeToAvoidBottomInset: false,
         appBar: AppBar(
           title: Text("통 채우기"),
         ),
