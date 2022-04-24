@@ -1,4 +1,5 @@
 import 'package:bin_packing_and_job_scheduling_app/bin_packing/input_n_page.dart';
+import 'package:bin_packing_and_job_scheduling_app/job_scheduling/input_schedule_n_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -47,7 +48,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: Text("통 채우기")),
-            ElevatedButton(onPressed: () {}, child: Text("작업 스케줄링")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => InputSchduleNPage()),
+                  );
+                },
+                child: Text("작업 스케줄링")),
           ],
         ));
   }
