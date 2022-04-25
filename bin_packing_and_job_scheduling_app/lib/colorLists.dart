@@ -1,0 +1,82 @@
+import 'dart:ui';
+
+List<Color> colorListA = [
+  Color.fromARGB(
+    255,
+    58,
+    187,
+    188,
+  ),
+  Color.fromARGB(
+    255,
+    157,
+    227,
+    225,
+  ),
+  Color.fromARGB(
+    255,
+    118,
+    230,
+    182,
+  ),
+  Color.fromARGB(
+    255,
+    191,
+    243,
+    221,
+  )
+];
+
+List<Color> colorListBNoraml = [
+  Color.fromARGB(
+    255,
+    45,
+    156,
+    219,
+  ),
+  Color.fromARGB(
+    255,
+    98,
+    184,
+    232,
+  ),
+  Color.fromARGB(
+    255,
+    154,
+    209,
+    240,
+  ),
+  Color.fromARGB(
+    255,
+    207,
+    233,
+    248,
+  )
+];
+
+List<Color> colorListBLong = [
+  Color.fromARGB(
+    255,
+    38,
+    204,
+    133,
+  ),
+  Color.fromARGB(
+    255,
+    118,
+    230,
+    182,
+  ),
+  Color.fromARGB(
+    255,
+    168,
+    238,
+    208,
+  ),
+  Color.fromARGB(
+    168,
+    191,
+    243,
+    221,
+  )
+];
