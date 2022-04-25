@@ -35,7 +35,7 @@ class _InputNPageState extends State<InputNPage> {
                   ),
                 ),
                 const Text(
-                  "통 알고리즘",
+                  "통 채우기",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
