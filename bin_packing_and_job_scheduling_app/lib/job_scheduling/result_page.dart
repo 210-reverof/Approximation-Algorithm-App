@@ -57,8 +57,8 @@ Widget getResultBox(
   }
 
   // scale 구하기
-  double binWidthScale = width / max * 0.9; // 3칸은 한 가로 넓이, 1칸은 여백
-  double binHeightScale = (height / (4 * (resultList.length) - 1));
+  double scheduleWidthScale = width / max * 0.9; // 3칸은 한 가로 넓이, 1칸은 여백
+  double scheduleHeightScale = (height / (4 * (resultList.length) - 1));
 
   // 각 요소 사각형
   for (int i = 0; i < resultList.length; i++) {
@@ -66,21 +66,32 @@ Widget getResultBox(
     for (int j = 0; j < resultList[i].length; j++) {
       boxes.add(Positioned(
           left: end,
-          top: i * binHeightScale * 4,
+          top: i * scheduleHeightScale * 4,
           child: Container(
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
                 color: Color.fromARGB(255, 131, 148, 202),
                 border: Border.all(color: Color.fromARGB(255, 7, 10, 15))),
-            width: binWidthScale * resultList[i][j],
-            height: binHeightScale * 3,
+            width: scheduleWidthScale * resultList[i][j],
+            height: scheduleHeightScale * 3,
             child: Center(
               child: Text(resultList[i][j].toString()),
             ),
           )));
-      end += binWidthScale * resultList[i][j];
+      end += scheduleWidthScale * resultList[i][j];
     }
   }
+
+  // 최종 마감 시간 표시
+  boxes.add(Positioned(
+    left: max * scheduleWidthScale,
+    top: maxIndex * scheduleHeightScale * 4,
+    child: Container(
+      margin: const EdgeInsets.only(left: 5),
+      height: scheduleHeightScale * 3,
+      child: Center(child: Text(max.toString())),
+    ),
+  ));
 
   return Center(
     child: Container(

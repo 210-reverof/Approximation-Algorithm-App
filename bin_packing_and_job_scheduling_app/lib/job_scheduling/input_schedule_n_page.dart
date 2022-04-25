@@ -1,12 +1,12 @@
 import 'package:bin_packing_and_job_scheduling_app/job_scheduling/input_val_page.dart';
 import 'package:flutter/material.dart';
 
-class InputSchduleNPage extends StatefulWidget {
+class InputScheduleNPage extends StatefulWidget {
   @override
-  State<InputSchduleNPage> createState() => _InputSchduleNPageState();
+  State<InputScheduleNPage> createState() => _InputScheduleNPageState();
 }
 
-class _InputSchduleNPageState extends State<InputSchduleNPage> {
+class _InputScheduleNPageState extends State<InputScheduleNPage> {
   String n = "", c = "";
   @override
   Widget build(BuildContext context) {

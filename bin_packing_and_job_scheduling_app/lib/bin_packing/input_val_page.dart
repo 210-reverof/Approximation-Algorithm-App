@@ -24,28 +24,31 @@ class _InputValPageState extends State<InputValPage> {
       inputWidget.add(getInputTextField(i));
     }
     inputWidget.add(
-      ElevatedButton(
-          onPressed: () {
-            // Navigator.push(
-            //   context,
-            //   MaterialPageRoute(
-            //       builder: (context) => ResultPage(
-            //             inputList: inputVal,
-            //             binSize: widget.binSize,
-            //           )),
-            // );
+      Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ElevatedButton(
+            onPressed: () {
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //       builder: (context) => ResultPage(
+              //             inputList: inputVal,
+              //             binSize: widget.binSize,
+              //           )),
+              // );
 
-            // for debugging
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => const ResultPage(
-                        inputList: [7, 5, 6, 4, 2, 3, 7, 5],
-                        binSize: 10,
-                      )),
-            );
-          },
-          child: Text("값 입력 완료")),
+              // for debugging
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const ResultPage(
+                          inputList: [7, 5, 6, 4, 2, 3, 7, 5],
+                          binSize: 10,
+                        )),
+              );
+            },
+            child: Text("값 입력 완료")),
+      ),
     );
 
     return Scaffold(
@@ -64,13 +67,21 @@ class _InputValPageState extends State<InputValPage> {
 Widget getInputTextField(int i) {
   return Container(
     margin: const EdgeInsets.all(8.0),
-    child: TextField(
-      decoration: InputDecoration(
-        border: OutlineInputBorder(),
-      ),
-      onChanged: (val) {
-        inputVal[i] = val;
-      },
+    child: Column(
+      children: [
+        Text((i + 1).toString() + "번째 요소를 입력해주세요"),
+        SizedBox(
+          height: 10,
+        ),
+        TextField(
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+          ),
+          onChanged: (val) {
+            inputVal[i] = val;
+          },
+        ),
+      ],
     ),
   );
 }

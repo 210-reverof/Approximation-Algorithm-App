@@ -64,13 +64,21 @@ class _InputValPageState extends State<InputValPage> {
 Widget getInputTextField(int i) {
   return Container(
     margin: const EdgeInsets.all(8.0),
-    child: TextField(
-      decoration: InputDecoration(
-        border: OutlineInputBorder(),
-      ),
-      onChanged: (val) {
-        inputVal[i] = val;
-      },
+    child: Column(
+      children: [
+        Text((i + 1).toString() + "번째 요소를 입력해주세요"),
+        SizedBox(
+          height: 10,
+        ),
+        TextField(
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+          ),
+          onChanged: (val) {
+            inputVal[i] = val;
+          },
+        ),
+      ],
     ),
   );
 }
