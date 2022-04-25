@@ -13,9 +13,9 @@ class ResultPage extends StatefulWidget {
 }
 
 int typeNum = 0;
+String binResultStr = "처음 적합";
 
 class _ResultPageState extends State<ResultPage> {
-  String binResultStr = "처음 적합";
   int binResultNum = 0;
   @override
   Widget build(BuildContext context) {
@@ -123,6 +123,7 @@ class _ResultPageState extends State<ResultPage> {
     return ElevatedButton(
         onPressed: () {
           setState(() {
+            binResultStr = text;
             typeNum = num;
           });
         },

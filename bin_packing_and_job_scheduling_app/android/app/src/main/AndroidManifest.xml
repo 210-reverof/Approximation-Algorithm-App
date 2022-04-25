@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.bin_packing_and_job_scheduling_app">
+    package="com.aaa.bin_packing_and_job_scheduling_app">
    <application
         android:label="bin_packing_and_job_scheduling_app"
         android:name="${applicationName}"
